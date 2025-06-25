@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURIX 동아리 활동 결과 보고서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 폰트 설정 */
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            background-color: #111827; /* 다크 모드 배경색 */
+            color: #E5E7EB; /* 기본 텍스트 색상 */
+        }
+
+        /* 제목 및 강조 텍스트 폰트 */
+        h1, h2, h3, .font-display {
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        }
+
+        /* 스크롤 애니메이션을 위한 클래스 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 그라데이션 텍스트 */
+        .gradient-text {
+            background: linear-gradient(to right, #FBBF24, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* 카드 호버 효과 */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.1), 0 4px 6px -2px rgba(251, 191, 36, 0.05);
+        }
+        
+        /* 헤더 고정 및 배경 블러 처리 */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- 헤더 -->
+    <header class="w-full py-4 px-8 border-b border-gray-700">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold font-display">
+                <span class="gradient-text">Team AURIX</span> Report
+            </div>
+            <nav class="hidden md:flex space-x-6 text-gray-400">
+                <a href="#overview" class="hover:text-amber-400 transition-colors">개요</a>
+                <a href="#activities" class="hover:text-amber-400 transition-colors">주요 활동</a>
+                <a href="#slam" class="hover:text-amber-400 transition-colors">SLAM 프로젝트</a>
+                <a href="#linearization" class="hover:text-amber-400 transition-colors">선형화</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- 타이틀 섹션 -->
+        <section class="text-center my-12 md:my-20 reveal">
+            <h1 class="text-4xl md:text-6xl font-bold font-display leading-tight mb-4">
+                진로 동아리 <span class="gradient-text">AURIX</span><br> 최종 결과 보고서
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                한 달간의 인공지능과 자율주행 기술 탐구 기록
+            </p>
+        </section>
+
+        <!-- 개요 섹션 -->
+        <section id="overview" class="my-16 reveal">
+            <h2 class="text-3xl font-bold mb-8 text-center font-display border-b-2 border-amber-400 pb-2 inline-block">활동 개요</h2>
+            <div class="bg-gray-800 rounded-xl p-8 grid md:grid-cols-2 gap-8 items-center shadow-lg">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-amber-400">팀워크와 협업 환경 구축</h3>
+                    <p class="text-gray-300">
+                        본격적인 프로젝트에 앞서, 효과적인 협업을 위해 GitHub Team Organization을 생성하고 운영하는 방법을 익혔습니다. 
+                        멤버별 권한 설정, Git Branch 전략, Pull Request를 통한 코드 리뷰 및 병합 프로세스를 실습하며 협업의 기틀을 다졌습니다.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2">
+                        <li>GitHub Organization 생성 및 멤버 초대</li>
+                        <li>Branch 생성 및 Pull Request(PR) 실습</li>
+                        <li>멤버 권한 관리 및 브랜치 병합 테스트</li>
+                        <li>코드 리뷰 문화 정착</li>
+                    </ul>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-2xl">
+                    <img src="img/스크린샷 2025-06-25 오후 3.28.13.png" alt="GitHub 팀 조직 화면" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/E5E7EB?text=GitHub+Image';">
+                </div>
+            </div>
+        </section>
+
+        <!-- 주요 활동 내용 -->
+        <section id="activities" class="my-16 reveal">
+            <h2 class="text-3xl font-bold mb-8 text-center font-display border-b-2 border-amber-400 pb-2 inline-block">데이터 분석 및 시각화</h2>
+            <div class="bg-gray-800 rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center shadow-lg">
+                <div class="md:w-1/2 rounded-lg overflow-hidden">
+                    <img src="img/스크린샷 2025-06-25 오후 3.28.23.png" alt="데이터 분석 및 시각화 결과" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x800/111827/E5E7EB?text=Visualization';">
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <h3 class="text-2xl font-bold text-amber-400">모델 성능 최적화와 시각적 비교</h3>
+                    <p class="text-gray-300">
+                        다양한 데이터셋을 활용하여 모델을 훈련하고, Epoch 변화에 따른 성능 최적화 과정을 탐구했습니다. 
+                        특히 Matplotlib 라이브러리를 사용하여 훈련 결과를 다각도로 시각화함으로써, 모델의 성능 변화를 직관적으로 이해하고 개선 방향을 설정하는 능력을 길렀습니다.
+                    </p>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <p class="font-mono text-sm text-green-400">> # 데이터 로드 및 전처리</p>
+                        <p class="font-mono text-sm text-green-400">> # 모델 훈련 및 Epoch별 성능 기록</p>
+                        <p class="font-mono text-sm text-green-400">> # 결과 시각화 (손실 함수, 정확도 등)</p>
+                        <p class="font-mono text-sm text-cyan-400">> print("모든 파일 준비 완료!")</p>
+                    </div>
+                     <img src="img/스크린샷 2025-06-25 오후 3.28.27.png" alt="코드 스크린샷" class="w-full h-auto object-cover rounded-lg mt-4" onerror="this.onerror=null;this.src='https://placehold.co/600x200/111827/E5E7EB?text=Code';">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SLAM 프로젝트 섹션 -->
+        <section id="slam" class="my-16 reveal">
+            <h2 class="text-3xl font-bold mb-12 text-center font-display border-b-2 border-amber-400 pb-2 inline-block">SLAM 시뮬레이션 프로젝트</h2>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Card 1: fastSLAMresampling.py -->
+                <div class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-400 mb-2">1. fastSLAMresampling.py</h3>
+                        <p class="text-gray-400 mb-4">입자 필터 기반 SLAM 리샘플링 시뮬레이션</p>
+                        <div class="mb-4 rounded-md overflow-hidden">
+                           <img src="img/스크린샷 2025-06-25 오후 3.28.32.png" alt="fastSLAMresampling.py 코드" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/E5E7EB?text=Code+Image';">
+                        </div>
+                        <p class="font-semibold text-gray-200">목적:</p>
+                        <p class="text-gray-400 mb-4">Systematic Resampling 기반 입자 필터의 동작 과정을 시각화하여 SLAM의 핵심 개념을 실습합니다.</p>
+                        <p class="font-semibold text-gray-200">주요 기능:</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 mt-2">
+                            <li>200개의 입자를 사용한 위치 추정</li>
+                            <li>Gaussian 노이즈를 적용한 센서 및 모션 모델링</li>
+                            <li>Systematic Resampling 알고리즘 적용</li>
+                            <li>실제 경로, 추정 경로, 입자 분포 시각화</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: fastSLAM.py -->
+                <div class="card bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-400 mb-2">2. fastSLAM.py</h3>
+                        <p class="text-gray-400 mb-4">개선된 제안 분포 기반 입자 필터</p>
+                        <div class="mb-4 rounded-md overflow-hidden">
+                             <img src="img/스크린샷 2025-06-25 오후 3.28.40.png" alt="fastSLAM.py 코드" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/E5E7EB?text=Code+Image';">
+                        </div>
+                        <p class="font-semibold text-gray-200">목적:</p>
+                        <p class="text-gray-400 mb-4">센서 정보를 고려한 '개선된 제안 분포'를 사용하여 입자 필터의 정확도 향상을 시뮬레이션합니다.</p>
+                        <p class="font-semibold text-gray-200">주요 기능:</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 mt-2">
+                            <li>100개의 입자를 사용한 효율적 연산</li>
+                            <li>센서 측정치 기반 가중치 계산 (Gaussian likelihood)</li>
+                            <li>np.random.choice를 이용한 확률 기반 리샘플링</li>
+                            <li>단일 스텝에서의 정확도 향상 효과 확인</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 선형화 프로젝트 -->
+        <section id="linearization" class="my-16 reveal">
+             <h2 class="text-3xl font-bold mb-8 text-center font-display border-b-2 border-amber-400 pb-2 inline-block">비선형 시스템의 선형화</h2>
+            <div class="bg-gray-800 rounded-xl p-8 grid md:grid-cols-2 gap-8 items-center shadow-lg">
+                 <div class="rounded-lg overflow-hidden shadow-2xl">
+                    <img src="img/스크린샷 2025-06-25 오후 3.28.47.png" alt="선형화.py 코드" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111827/E5E7EB?text=Linearization+Code';">
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-amber-400">선형화.py - 야코비안 행렬 계산</h3>
+                    <p class="text-gray-300">
+                        비선형 시스템을 선형 시스템으로 근사하는 것은 EKF(Extended Kalman Filter)와 같은 고급 필터 구현의 핵심입니다. 
+                        상태 전이 및 관측 함수에 대한 야코비안 행렬을 수치적으로 계산하는 방법을 구현하고 테스트했습니다.
+                    </p>
+                    <p class="font-semibold text-gray-200">목적:</p>
+                    <p class="text-gray-400 mb-4">비선형 시스템의 선형화를 위해 수치적으로 야코비안(Jacobian) 행렬을 계산하는 예제를 실습합니다.</p>
+                    <p class="font-semibold text-gray-200">주요 기능:</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 mt-2">
+                        <li>상태 전이 함수 f(x): 선형 운동 모델</li>
+                        <li>관측 함수 h(x): 원점 기준 거리 측정 모델</li>
+                        <li>중앙차분 방식을 이용한 수치적 야코비안 계산</li>
+                        <li>EKF 구현에 필수적인 기법 학습</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-12">
+        <div class="container mx-auto py-6 text-center text-gray-500">
+            <p>&copy; 2025 Team AURIX. All Rights Reserved.</p>
+            <p class="text-sm mt-1">Generated based on Sejong Dream Block Program Report.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 스크롤에 따른 요소 등장 애니메이션
+        const revealSections = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(reveal => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealSections);
+        // 페이지 로드 시 초기 실행
+        revealSections();
+
+        // 부드러운 스크롤 이동
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
